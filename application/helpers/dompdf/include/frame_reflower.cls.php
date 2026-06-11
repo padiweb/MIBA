@@ -224,9 +224,16 @@ abstract class Frame_Reflower {
                           array("",'"',"'"), $string);
 
     // Convert escaped hex characters into ascii characters (e.g. \A => newline)
+<<<<<<< HEAD
     $string = preg_replace_callback("/\\\\([0-9a-fA-F]{0,6})(\s)?(?(2)|(?=[^0-9a-fA-F]))/",
                                     create_function('$matches',
                                                     'return chr(hexdec($matches[1]));'),
+=======
+        $string = preg_replace_callback("/\\\\([0-9a-fA-F]{0,6})(\s)?(?(2)|(?=[^0-9a-fA-F]))/",
+                                    function($matches) {
+                                        return chr(hexdec($matches[1]));
+                                    },
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
                                     $string);
     return $string;
   }
@@ -412,4 +419,8 @@ abstract class Frame_Reflower {
     if ( $style->counter_increment && ($increment = $style->counter_increment) !== "none" )
       $frame->increment_counters($increment);
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156

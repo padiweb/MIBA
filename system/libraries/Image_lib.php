@@ -289,6 +289,17 @@ class CI_Image_lib {
 	public $dest_folder		= '';
 
 	/**
+<<<<<<< HEAD
+=======
+	 * Destination image filename
+	 * Declared explicitly for PHP 8.2+ compatibility (dynamic properties deprecated)
+	 *
+	 * @var string
+	 */
+	public $dest_image		= '';
+
+	/**
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 	 * Image mime-type
 	 *
 	 * @var string
@@ -1836,4 +1847,8 @@ class CI_Image_lib {
 		return (count($this->error_msg) > 0) ? $open.implode($close.$open, $this->error_msg).$close : '';
 	}
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156

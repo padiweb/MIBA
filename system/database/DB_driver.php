@@ -354,6 +354,33 @@ abstract class CI_DB_driver {
 	 */
 	protected $_count_string = 'SELECT COUNT(*) AS ';
 
+<<<<<<< HEAD
+=======
+	/**
+	 * Failover connections
+	 * Declared explicitly for PHP 8.2+ compatibility
+	 *
+	 * @var	array
+	 */
+	public $failover = array();
+
+	/**
+	 * Whether to use client compression (MySQL only)
+	 * Declared explicitly for PHP 8.2+ compatibility
+	 *
+	 * @var	bool
+	 */
+	public $compress = FALSE;
+
+	/**
+	 * Whether to force Strict Mode connections
+	 * Declared explicitly for PHP 8.2+ compatibility
+	 *
+	 * @var	bool
+	 */
+	public $stricton = FALSE;
+
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 	// --------------------------------------------------------------------
 
 	/**
@@ -1984,4 +2011,8 @@ abstract class CI_DB_driver {
 	{
 	}
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156

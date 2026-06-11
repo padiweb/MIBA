@@ -76,6 +76,7 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
+<<<<<<< HEAD
 	'username' => 'u691369715_miba',
 	'password' => 'v#J=&e8^U',
 	'database' => 'u691369715_miba',
@@ -83,6 +84,15 @@ $db['default'] = array(
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
+=======
+	'username' => 'root',
+	'password' => '',
+	'database' => 'miba',
+	'dbdriver' => 'mysqli',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'development'),
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 	'cache_on' => FALSE,
 	'cachedir' => '',
 	'char_set' => 'utf8mb4',

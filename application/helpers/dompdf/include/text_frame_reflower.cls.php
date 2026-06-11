@@ -3,7 +3,11 @@
  * @package dompdf
  * @link    http://www.dompdf.com/
  * @author  Benj Carson <benjcarson@digitaljunkies.ca>
+<<<<<<< HEAD
  * @author  Fabien Ménager <fabien.menager@gmail.com>
+=======
+ * @author  Fabien Mï¿½nager <fabien.menager@gmail.com>
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
  * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
  * @version $Id: text_frame_reflower.cls.php 462 2012-01-29 22:44:23Z fabien.menager $
  */
@@ -370,16 +374,30 @@ class Text_Frame_Reflower extends Frame_Reflower {
       // faster than doing a single-pass character by character scan.  Heh,
       // yes I took the time to bench it ;)
       $words = array_flip(preg_split("/[\s-]+/u",$str, -1, PREG_SPLIT_DELIM_CAPTURE));
+<<<<<<< HEAD
       array_walk($words, create_function('&$val,$str',
                                          '$val = Font_Metrics::get_text_width($str, "'.addslashes($font).'", '.$size.', '.$word_spacing.', '.$char_spacing.');'));
+=======
+      $font_copy = $font; $size_copy = $size; $ws_copy = $word_spacing; $cs_copy = $char_spacing;
+      array_walk($words, function(&$val, $str) use ($font_copy, $size_copy, $ws_copy, $cs_copy) {
+        $val = Font_Metrics::get_text_width($str, $font_copy, $size_copy, $ws_copy, $cs_copy);
+      });
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
       arsort($words);
       $min = reset($words);
       break;
 
     case "pre":
       $lines = array_flip(preg_split("/\n/u", $str));
+<<<<<<< HEAD
       array_walk($lines, create_function('&$val,$str',
                                          '$val = Font_Metrics::get_text_width($str, "'.addslashes($font).'", '.$size.', '.$word_spacing.', '.$char_spacing.');'));
+=======
+      $font_copy2 = $font; $size_copy2 = $size; $ws_copy2 = $word_spacing; $cs_copy2 = $char_spacing;
+      array_walk($lines, function(&$val, $str) use ($font_copy2, $size_copy2, $ws_copy2, $cs_copy2) {
+        $val = Font_Metrics::get_text_width($str, $font_copy2, $size_copy2, $ws_copy2, $cs_copy2);
+      });
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 
       arsort($lines);
       $min = reset($lines);
@@ -406,8 +424,15 @@ class Text_Frame_Reflower extends Frame_Reflower {
     case "pre-wrap":
       // Find the longest word (i.e. minimum length)
       $lines = array_flip(preg_split("/\n/", $text));
+<<<<<<< HEAD
       array_walk($lines, create_function('&$val,$str',
                                          '$val = Font_Metrics::get_text_width($str, "'.$font.'", '.$size.', '.$word_spacing.', '.$char_spacing.');'));
+=======
+      $font_copy3 = $font; $size_copy3 = $size; $ws_copy3 = $word_spacing; $cs_copy3 = $char_spacing;
+      array_walk($lines, function(&$val, $str) use ($font_copy3, $size_copy3, $ws_copy3, $cs_copy3) {
+        $val = Font_Metrics::get_text_width($str, $font_copy3, $size_copy3, $ws_copy3, $cs_copy3);
+      });
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
       arsort($lines);
       reset($lines);
       $str = key($lines);
@@ -430,4 +455,8 @@ class Text_Frame_Reflower extends Frame_Reflower {
 
   }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156

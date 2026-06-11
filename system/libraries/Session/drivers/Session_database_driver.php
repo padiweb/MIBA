@@ -126,6 +126,10 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 	 * @param	string	$name		Session cookie name, unused
 	 * @return	bool
 	 */
+<<<<<<< HEAD
+=======
+	#[\ReturnTypeWillChange]
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 	public function open($save_path, $name)
 	{
 		if (empty($this->_db->conn_id) && ! $this->_db->db_connect())
@@ -146,6 +150,10 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 	 * @param	string	$session_id	Session ID
 	 * @return	string	Serialized session data
 	 */
+<<<<<<< HEAD
+=======
+	#[\ReturnTypeWillChange]
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 	public function read($session_id)
 	{
 		if ($this->_get_lock($session_id) !== FALSE)
@@ -203,6 +211,10 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 	 * @param	string	$session_data	Serialized session data
 	 * @return	bool
 	 */
+<<<<<<< HEAD
+=======
+	#[\ReturnTypeWillChange]
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 	public function write($session_id, $session_data)
 	{
 		// Prevent previous QB calls from messing with our queries
@@ -275,6 +287,10 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 	 *
 	 * @return	bool
 	 */
+<<<<<<< HEAD
+=======
+	#[\ReturnTypeWillChange]
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 	public function close()
 	{
 		return ($this->_lock && ! $this->_release_lock())
@@ -292,6 +308,10 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 	 * @param	string	$session_id	Session ID
 	 * @return	bool
 	 */
+<<<<<<< HEAD
+=======
+	#[\ReturnTypeWillChange]
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 	public function destroy($session_id)
 	{
 		if ($this->_lock)
@@ -330,6 +350,10 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 	 * @param	int 	$maxlifetime	Maximum lifetime of sessions
 	 * @return	bool
 	 */
+<<<<<<< HEAD
+=======
+	#[\ReturnTypeWillChange]
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 	public function gc($maxlifetime)
 	{
 		// Prevent previous QB calls from messing with our queries
@@ -417,4 +441,8 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 
 		return parent::_release_lock();
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156

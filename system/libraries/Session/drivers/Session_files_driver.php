@@ -129,6 +129,10 @@ class CI_Session_files_driver extends CI_Session_driver implements SessionHandle
 	 * @param	string	$name		Session cookie name
 	 * @return	bool
 	 */
+<<<<<<< HEAD
+=======
+	#[\ReturnTypeWillChange]
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 	public function open($save_path, $name)
 	{
 		if ( ! is_dir($save_path))
@@ -161,6 +165,10 @@ class CI_Session_files_driver extends CI_Session_driver implements SessionHandle
 	 * @param	string	$session_id	Session ID
 	 * @return	string	Serialized session data
 	 */
+<<<<<<< HEAD
+=======
+	#[\ReturnTypeWillChange]
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 	public function read($session_id)
 	{
 		// This might seem weird, but PHP 5.6 introduces session_reset(),
@@ -230,6 +238,10 @@ class CI_Session_files_driver extends CI_Session_driver implements SessionHandle
 	 * @param	string	$session_data	Serialized session data
 	 * @return	bool
 	 */
+<<<<<<< HEAD
+=======
+	#[\ReturnTypeWillChange]
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 	public function write($session_id, $session_data)
 	{
 		// If the two IDs don't match, we have a session_regenerate_id() call
@@ -287,6 +299,10 @@ class CI_Session_files_driver extends CI_Session_driver implements SessionHandle
 	 *
 	 * @return	bool
 	 */
+<<<<<<< HEAD
+=======
+	#[\ReturnTypeWillChange]
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 	public function close()
 	{
 		if (is_resource($this->_file_handle))
@@ -310,6 +326,10 @@ class CI_Session_files_driver extends CI_Session_driver implements SessionHandle
 	 * @param	string	$session_id	Session ID
 	 * @return	bool
 	 */
+<<<<<<< HEAD
+=======
+	#[\ReturnTypeWillChange]
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 	public function destroy($session_id)
 	{
 		if ($this->close() === $this->_success)
@@ -351,6 +371,10 @@ class CI_Session_files_driver extends CI_Session_driver implements SessionHandle
 	 * @param	int 	$maxlifetime	Maximum lifetime of sessions
 	 * @return	bool
 	 */
+<<<<<<< HEAD
+=======
+	#[\ReturnTypeWillChange]
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 	public function gc($maxlifetime)
 	{
 		if ( ! is_dir($this->_config['save_path']) OR ($directory = opendir($this->_config['save_path'])) === FALSE)
@@ -403,4 +427,8 @@ class CI_Session_files_driver extends CI_Session_driver implements SessionHandle
 			? mb_strlen($str, '8bit')
 			: strlen($str);
 	}
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156

@@ -92,6 +92,17 @@ class CI_URI {
 	protected $_permitted_uri_chars;
 
 	/**
+<<<<<<< HEAD
+=======
+	 * Config class object
+	 * Declared explicitly for PHP 8.2+ compatibility (dynamic properties deprecated)
+	 *
+	 * @var	object
+	 */
+	public $config;
+
+	/**
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 	 * Class constructor
 	 *
 	 * @return	void
@@ -640,4 +651,8 @@ class CI_URI {
 		return ltrim(load_class('Router', 'core')->directory, '/').implode('/', $this->rsegments);
 	}
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156

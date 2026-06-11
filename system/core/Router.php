@@ -111,6 +111,17 @@ class CI_Router {
 	 */
 	public $enable_query_strings = FALSE;
 
+<<<<<<< HEAD
+=======
+	/**
+	 * URI class object
+	 * Declared explicitly for PHP 8.2+ compatibility (dynamic properties deprecated)
+	 *
+	 * @var	object
+	 */
+	public $uri;
+
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 	// --------------------------------------------------------------------
 
 	/**
@@ -512,4 +523,8 @@ class CI_Router {
 		return $this->directory;
 	}
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156

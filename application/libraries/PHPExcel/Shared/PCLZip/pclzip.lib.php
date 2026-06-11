@@ -5328,7 +5328,11 @@
   {
     $v_result=1;
 
+<<<<<<< HEAD
     // ----- Look if function exists
+=======
+    // ----- Look if function exists (PHP 8: magic_quotes dihapus, skip)
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
     if (   (!function_exists("get_magic_quotes_runtime"))
 	    || (!function_exists("set_magic_quotes_runtime"))) {
       return $v_result;
@@ -5362,7 +5366,11 @@
   {
     $v_result=1;
 
+<<<<<<< HEAD
     // ----- Look if function exists
+=======
+    // ----- Look if function exists (PHP 8: magic_quotes dihapus, skip)
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
     if (   (!function_exists("get_magic_quotes_runtime"))
 	    || (!function_exists("set_magic_quotes_runtime"))) {
       return $v_result;
@@ -5691,4 +5699,8 @@
   // --------------------------------------------------------------------------------
 
 
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156

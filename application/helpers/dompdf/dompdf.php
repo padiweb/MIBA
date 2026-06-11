@@ -181,7 +181,11 @@ switch ( $sapi ) {
   }
 
   if ( isset($opts['t']) ) {
+<<<<<<< HEAD
     $arr = split(',',$opts['t']);
+=======
+    $arr = explode(',',$opts['t']);
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
     $types = array();
     foreach ($arr as $type)
       $types[ trim($type) ] = 1;
@@ -283,4 +287,8 @@ if ( $save_file ) {
 
 if ( !headers_sent() ) {
   $dompdf->stream($outfile, $options);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156

@@ -152,12 +152,20 @@ class MX_Loader extends CI_Loader
 	{
 		if (is_array($library)) return $this->libraries($library);
 
+<<<<<<< HEAD
 		$class = strtolower(basename($library));
+=======
+		$class = strtolower(basename((string) $library));
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 
 		if (isset($this->_ci_classes[$class]) && $_alias = $this->_ci_classes[$class])
 			return $this;
 
+<<<<<<< HEAD
 		($_alias = strtolower($object_name)) OR $_alias = $class;
+=======
+		($_alias = strtolower((string) $object_name)) OR $_alias = $class;
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 
 		list($path, $_library) = Modules::find($library, $this->_module, 'libraries/');
 
@@ -205,7 +213,11 @@ class MX_Loader extends CI_Loader
 			return $this;
 
 		/* check module */
+<<<<<<< HEAD
 		list($path, $_model) = Modules::find(strtolower($model), $this->_module, 'models/');
+=======
+		list($path, $_model) = Modules::find(strtolower((string) $model), $this->_module, 'models/');
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 
 		if ($path == FALSE)
 		{
@@ -247,7 +259,11 @@ class MX_Loader extends CI_Loader
 	{
 		if (is_array($module)) return $this->modules($module);
 
+<<<<<<< HEAD
 		$_alias = strtolower(basename($module));
+=======
+		$_alias = strtolower(basename((string) $module));
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 		CI::$APP->$_alias = Modules::load(array($module => $params));
 		return $this;
 	}

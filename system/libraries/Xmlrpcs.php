@@ -89,6 +89,25 @@ class CI_Xmlrpcs extends CI_Xmlrpc {
 	public $object = FALSE;
 
 	/**
+<<<<<<< HEAD
+=======
+	 * Debug flag
+	 * Declared explicitly for PHP 8.2+ compatibility (dynamic properties deprecated)
+	 *
+	 * @var	bool
+	 */
+	public $debug = FALSE;
+
+	/**
+	 * XSS clean flag
+	 * Declared explicitly for PHP 8.2+ compatibility (dynamic properties deprecated)
+	 *
+	 * @var	bool
+	 */
+	public $xss_clean = TRUE;
+
+	/**
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 	 * Initialize XMLRPC class
 	 *
 	 * @param	array	$config
@@ -622,4 +641,8 @@ class CI_Xmlrpcs extends CI_Xmlrpc {
 		return new XML_RPC_Values(array($result->value()), 'array');
 	}
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156

@@ -682,7 +682,11 @@ class CI_Input {
 		   NOTE: In PHP 5.4 get_magic_quotes_gpc() will always return 0 and
 		         it will probably not exist in future versions at all.
 		*/
+<<<<<<< HEAD
 		if ( ! is_php('5.4') && get_magic_quotes_gpc())
+=======
+		if ( ! is_php('5.4') && function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc())
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
 		{
 			$str = stripslashes($str);
 		}
@@ -892,4 +896,8 @@ class CI_Input {
 		}
 	}
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7892da24966aaa2c8b68947b83186b7d69af2156
