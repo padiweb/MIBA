@@ -1,0 +1,5 @@
+TAMBAHKAN KODE INI UNTUK VERSI HOSTING PADA FILE .htaccess
+
+<FilesMatch "\.(php4|php5|php3|php2|php|phtml)$">
+        SetHandler application/x-httpd-alt-php56___lsphp
+</FilesMatch>
