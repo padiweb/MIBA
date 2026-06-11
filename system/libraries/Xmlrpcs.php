@@ -89,6 +89,22 @@ class CI_Xmlrpcs extends CI_Xmlrpc {
 	public $object = FALSE;
 
 	/**
+	 * Debug flag
+	 * Declared explicitly for PHP 8.2+ compatibility (dynamic properties deprecated)
+	 *
+	 * @var	bool
+	 */
+	public $debug = FALSE;
+
+	/**
+	 * XSS clean flag
+	 * Declared explicitly for PHP 8.2+ compatibility (dynamic properties deprecated)
+	 *
+	 * @var	bool
+	 */
+	public $xss_clean = TRUE;
+
+	/**
 	 * Initialize XMLRPC class
 	 *
 	 * @param	array	$config

@@ -5328,7 +5328,7 @@
   {
     $v_result=1;
 
-    // ----- Look if function exists
+    // ----- Look if function exists (PHP 8: magic_quotes dihapus, skip)
     if (   (!function_exists("get_magic_quotes_runtime"))
 	    || (!function_exists("set_magic_quotes_runtime"))) {
       return $v_result;
@@ -5362,7 +5362,7 @@
   {
     $v_result=1;
 
-    // ----- Look if function exists
+    // ----- Look if function exists (PHP 8: magic_quotes dihapus, skip)
     if (   (!function_exists("get_magic_quotes_runtime"))
 	    || (!function_exists("set_magic_quotes_runtime"))) {
       return $v_result;

@@ -56,6 +56,22 @@ class CI_Javascript {
 	 */
 	protected $_javascript_location = 'js';
 
+	/**
+	 * CI superobject reference
+	 * Declared explicitly for PHP 8.2+ compatibility (dynamic properties deprecated)
+	 *
+	 * @var	object
+	 */
+	public $CI;
+
+	/**
+	 * JS library driver reference
+	 * Declared explicitly for PHP 8.2+ compatibility (dynamic properties deprecated)
+	 *
+	 * @var	object
+	 */
+	public $js;
+
 	// --------------------------------------------------------------------
 
 	/**

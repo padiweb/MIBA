@@ -3,7 +3,7 @@
  * @package dompdf
  * @link    http://www.dompdf.com/
  * @author  Benj Carson <benjcarson@digitaljunkies.ca>
- * @author  Fabien Ménager <fabien.menager@gmail.com>
+ * @author  Fabien Mï¿½nager <fabien.menager@gmail.com>
  * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
  * @version $Id: autoload.inc.php 448 2011-11-13 13:00:03Z fabien.menager $
  */
@@ -68,6 +68,7 @@ if ( function_exists("spl_autoload_register") ) {
     }
     
     // Be polite and ensure that userland autoload gets retained
+    // PHP 8: __autoload() dihapus, gunakan spl_autoload_register
     if ( function_exists("__autoload") ) {
       spl_autoload_register("__autoload");
     }
@@ -76,11 +77,9 @@ if ( function_exists("spl_autoload_register") ) {
 
 else if ( !function_exists("__autoload") ) {
   /**
-   * Default __autoload() function
-   *
-   * @param string $class
+   * Default DOMPDF autoload function (PHP 8 compatible)
+   * Replaced standalone __autoload() with spl_autoload_register
    */
-  function __autoload($class) {
+  spl_autoload_register(function($class) {
     DOMPDF_autoload($class);
-  }
-}
+  });

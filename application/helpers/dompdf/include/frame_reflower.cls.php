@@ -224,9 +224,10 @@ abstract class Frame_Reflower {
                           array("",'"',"'"), $string);
 
     // Convert escaped hex characters into ascii characters (e.g. \A => newline)
-    $string = preg_replace_callback("/\\\\([0-9a-fA-F]{0,6})(\s)?(?(2)|(?=[^0-9a-fA-F]))/",
-                                    create_function('$matches',
-                                                    'return chr(hexdec($matches[1]));'),
+        $string = preg_replace_callback("/\\\\([0-9a-fA-F]{0,6})(\s)?(?(2)|(?=[^0-9a-fA-F]))/",
+                                    function($matches) {
+                                        return chr(hexdec($matches[1]));
+                                    },
                                     $string);
     return $string;
   }

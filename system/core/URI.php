@@ -92,6 +92,14 @@ class CI_URI {
 	protected $_permitted_uri_chars;
 
 	/**
+	 * Config class object
+	 * Declared explicitly for PHP 8.2+ compatibility (dynamic properties deprecated)
+	 *
+	 * @var	object
+	 */
+	public $config;
+
+	/**
 	 * Class constructor
 	 *
 	 * @return	void

@@ -354,6 +354,30 @@ abstract class CI_DB_driver {
 	 */
 	protected $_count_string = 'SELECT COUNT(*) AS ';
 
+	/**
+	 * Failover connections
+	 * Declared explicitly for PHP 8.2+ compatibility
+	 *
+	 * @var	array
+	 */
+	public $failover = array();
+
+	/**
+	 * Whether to use client compression (MySQL only)
+	 * Declared explicitly for PHP 8.2+ compatibility
+	 *
+	 * @var	bool
+	 */
+	public $compress = FALSE;
+
+	/**
+	 * Whether to force Strict Mode connections
+	 * Declared explicitly for PHP 8.2+ compatibility
+	 *
+	 * @var	bool
+	 */
+	public $stricton = FALSE;
+
 	// --------------------------------------------------------------------
 
 	/**

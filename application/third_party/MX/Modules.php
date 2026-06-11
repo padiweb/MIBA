@@ -80,10 +80,16 @@ class Modules
 	/** Load a module controller **/
 	public static function load($module) 
 	{
-		(is_array($module)) ? list($module, $params) = each($module) : $params = NULL;	
+		// PHP 8 compatible: each() dihapus, ganti dengan array_key_first()
+		if (is_array($module)) {
+			$params = reset($module);
+			$module = key($module);
+		} else {
+			$params = NULL;
+		}
 		
 		/* get the requested controller class name */
-		$alias = strtolower(basename($module));
+		$alias = strtolower(basename((string) $module));
 
 		/* create or return an existing controller from the registry */
 		if ( ! isset(self::$registry[$alias])) 

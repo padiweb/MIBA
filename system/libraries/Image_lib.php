@@ -289,6 +289,14 @@ class CI_Image_lib {
 	public $dest_folder		= '';
 
 	/**
+	 * Destination image filename
+	 * Declared explicitly for PHP 8.2+ compatibility (dynamic properties deprecated)
+	 *
+	 * @var string
+	 */
+	public $dest_image		= '';
+
+	/**
 	 * Image mime-type
 	 *
 	 * @var string
